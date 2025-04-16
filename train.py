@@ -7,7 +7,8 @@ import torch
 import numpy as np
 
 import gym
-import roboschool
+# import roboschool  # 删除此行
+import pybullet_envs  # 添加此行
 
 from PPO import PPO
 
@@ -16,7 +17,7 @@ def train():
     print("============================================================================================")
 
     ####### initialize environment hyperparameters ######
-    env_name = "RoboschoolWalker2d-v1"
+    env_name = "Walker2DBulletEnv-v0"
 
     has_continuous_action_space = True  # continuous action space; else discrete
 
